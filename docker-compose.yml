@@ -55,21 +55,21 @@ services:
       - postgres
       - migrations
 
-  mobile:
-    build: ./mobile
-    ports:
-      - "8081:8081"    # Expo development server
-      - "19000:19000"  # Expo tunnel
-      - "19001:19001"  # Expo tunnel
-      - "19002:19002"  # Expo tunnel
-    volumes:
-      - ./mobile:/app
-      - /app/node_modules
-    restart: unless-stopped
-    networks:
-      - app-network
-    depends_on:
-      - backend
+  # mobile:
+  #   build: ./mobile
+  #   ports:
+  #     - "8081:8081"    # Expo development server
+  #     - "19000:19000"  # Expo tunnel
+  #     - "19001:19001"  # Expo tunnel
+  #     - "19002:19002"  # Expo tunnel
+  #   volumes:
+  #     - ./mobile:/app
+  #     - /app/node_modules
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+  #   depends_on:
+  #     - backend
 
 volumes:
   postgres_data:

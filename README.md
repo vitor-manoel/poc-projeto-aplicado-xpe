@@ -8,7 +8,7 @@ A full-stack application demonstrating modern development practices with Docker 
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Mobile App    │    │   Backend API   │    │   PostgreSQL    │
 │   (React Native)│◄──►│   (Express.js)  │◄──►│   Database      │
-│   WatermelonDB  │    │   Umzug Migrations│   │   (Docker)      │
+│   SQLite        │    │   Umzug Migrations│   │   (Docker)      │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
@@ -23,7 +23,7 @@ A full-stack application demonstrating modern development practices with Docker 
 
 ### Mobile App
 - **Expo React Native** framework
-- **WatermelonDB** for offline-first data storage
+- **SQLite** for offline-first data storage
 - **TypeScript** support
 - **Modern UI** components
 
@@ -47,7 +47,7 @@ poc_pa_xpe/
 ├── mobile/                 # React Native app
 │   ├── app/                # Expo Router pages
 │   ├── components/         # Reusable components
-│   ├── database/           # WatermelonDB setup
+│   ├── database/           # SQLite setup
 │   ├── constants/          # App constants
 │   └── package.json        # Dependencies
 ├── docker-compose.yml      # Multi-service orchestration
@@ -244,7 +244,6 @@ docker-compose exec postgres psql -U admin -d poc_pa_xpe
 
 ### Mobile
 - **expo**: React Native framework
-- **@nozbe/watermelondb**: Offline-first database
 - **expo-sqlite**: SQLite adapter
 
 ## 🚀 Production Deployment
@@ -264,30 +263,3 @@ npx expo build:ios
 # Backend is already containerized
 docker-compose -f docker-compose.prod.yml up
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- **Vitor Manoel** - [GitHub](https://github.com/vitor-manoel)
-
-## 🙏 Acknowledgments
-
-- Expo team for the amazing React Native framework
-- WatermelonDB for offline-first database capabilities
-- Docker team for containerization platform
-- Express.js community for the web framework
-
----
-
-**Happy Coding! 🚀**
