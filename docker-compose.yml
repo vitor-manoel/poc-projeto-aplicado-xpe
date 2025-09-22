@@ -62,8 +62,6 @@ services:
       - "19000:19000"  # Expo tunnel
       - "19001:19001"  # Expo tunnel
       - "19002:19002"  # Expo tunnel
-    environment:
-      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
     volumes:
       - ./mobile:/app
       - /app/node_modules
